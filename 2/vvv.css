@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.item{
+    background-color: brown;
+    color: beige;
+    font-size: 1.1em;
+    padding: 1em;
+    flex: 1;
+}
+
+.item:first-child {
+    flex: 0 0 50%;
+}
+
+.item:nth-child(1) {
+    background-color: rgb(114, 21, 21);
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+
+    .item:nth-child(2) {
+        order: -1;
+    }
+}
